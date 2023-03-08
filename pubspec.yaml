@@ -46,7 +46,6 @@ dependencies:
   flutter_svg_provider: ^1.0.3
   container_tab_indicator: ^0.2.0
   curved_navigation_bar: ^1.0.2
-  indexed: ^0.0.8
 
 
 dev_dependencies:

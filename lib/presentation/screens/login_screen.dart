@@ -38,7 +38,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Stack(clipBehavior: Clip.none, children: [
+      bottomNavigationBar:
+       Stack(clipBehavior: Clip.none, children: [
         Container(
           height: elementHeight(elementHeight: 617).h,
           decoration: const BoxDecoration(
@@ -72,9 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           "OR",
                           style: TextStyle(
-                              color: AppColor.primary.withOpacity(0.61),
-                              fontSize: 14.sp,
-                              ),
+                            color: AppColor.primary.withOpacity(0.61),
+                            fontSize: 14.sp,
+                          ),
                         ),
                       ),
                       const Expanded(
@@ -184,7 +185,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         top: elementHeight(elementHeight: 31.99).h,
                       ),
                       child: RoundedButtton(
-                          buttonTitle: "Login", buttonFunction: () {}),
+                          buttonTitle: "Login",
+                          buttonFunction: () {
+                            Navigator.pushNamed(context, "/verify");
+                          }),
                     )
                   ],
                 ),

@@ -9,19 +9,11 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return // Container(
-        //   decoration:
-        //       BoxDecoration(borderRadius: BorderRadius.circular(10)),
-        // ),
-
-        Padding(
+    return Padding(
       padding: EdgeInsets.only(
           top: elementHeight(elementHeight: 22).h,
-          left: elementHeight(elementHeight: 20).w
-          ),
-      child: Stack(
-        alignment: AlignmentDirectional.bottomStart,
-        children: [
+          left: elementHeight(elementHeight: 20).w),
+      child: Stack(alignment: AlignmentDirectional.bottomStart, children: [
         ClipRRect(
             borderRadius: BorderRadius.circular(15),
             child: Image.asset(
@@ -32,13 +24,15 @@ class HomeHeader extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(left: elementWidth(elementWidth: 12).w,
-              bottom: elementHeight(elementHeight: 9).h),
+              padding: EdgeInsets.only(
+                  left: elementWidth(elementWidth: 12).w,
+                  bottom: elementHeight(elementHeight: 9).h),
               child: Text(
                 "New Release\nAcer Predator Helios 300",
-                style: TextStyle(fontSize: 11.sp, 
-                fontFamily: "Inter",
-                color: AppColor.white),
+                style: TextStyle(
+                    fontSize: 11.sp,
+                    fontFamily: "Inter",
+                    color: AppColor.white),
               ),
             ),
           ],

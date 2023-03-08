@@ -21,7 +21,7 @@ class CategoryTab extends StatelessWidget {
     return InkWell(
       onTap:onTap,
       child: SizedBox(
-        width: elementWidth(elementWidth: 135).w,
+        // width: elementWidth(elementWidth: 135).w,
         child: CustomShadowContainer(
           // backgroundColor: Colors.transparent,
           spreadRadius: 3,
@@ -38,8 +38,8 @@ class CategoryTab extends StatelessWidget {
                     child: RoundedImage(image: image,),
                   ),
                    Padding(
-                     padding:  EdgeInsets.only(
-                      left: elementWidth(elementWidth: 4).w
+                     padding:  EdgeInsets.symmetric(
+                      horizontal: elementWidth(elementWidth: 12).w
                      ),
                      child: Text(tabTitle ,style: const TextStyle(color: Colors.black,fontSize: 20)),
                    ),

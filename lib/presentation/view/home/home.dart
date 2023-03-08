@@ -120,14 +120,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         right: elementWidth(elementWidth: 20).w,
                       ),
                       child: Transform.translate(
-                        offset: const Offset(0, 30),
+                        offset: const Offset(0, 20),
                         child: StaggeredGrid(
                           crossAxisCount: 2,
                           itemCount: 6,
                           itemBuilder: ((context, index) {
-                            return const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: ProductCard(),
+                            return Padding(
+                              padding: EdgeInsets.all(6.0),
+                              child: InkWell(child: ProductCard(),
+                              onTap: () {
+                               Navigator.pushNamed(context, "/details");
+                              },),
                             );
                           }),
                         ),
@@ -143,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Text(
                             "Recomended\nfor You",
                             style: TextStyle(
-                                fontSize: 23.sp, color: AppColor.customGrey),
+                                fontSize: 20.sp, color: AppColor.customGrey),
                           )),
                     ),
               

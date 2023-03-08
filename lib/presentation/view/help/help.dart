@@ -18,6 +18,7 @@ class HelpScreen extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: elementWidth(elementWidth: 16).w,
+              vertical: elementHeight(elementHeight: 20).h
             ),
             child: Column(
               children: [
@@ -65,7 +66,10 @@ class HelpScreen extends StatelessWidget {
                   padding:EdgeInsets.only(
                     top: elementHeight(elementHeight: 80).h,
                   ),
-                  child: RoundedButtton(buttonTitle: "Continue", buttonFunction: (){}),
+                  child: RoundedButtton(buttonTitle: "Continue", buttonFunction: (){
+                      Navigator.pushNamed(context, "/home");
+
+                  }),
                 )
               
               ],

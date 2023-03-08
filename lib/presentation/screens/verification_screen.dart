@@ -29,7 +29,9 @@ class VerificationScreen extends StatelessWidget {
                 child: Text(
                   "Verify Phone",
                   style: TextStyle(
-                    color: AppColor.white, fontSize: 25.sp,fontFamily: "Inter"),
+                      color: AppColor.white,
+                      fontSize: 25.sp,
+                      fontFamily: "Inter"),
                 ),
               ),
               Row(
@@ -90,7 +92,8 @@ class VerificationScreen extends StatelessWidget {
                     top: elementHeight(elementHeight: 90).h,
                     bottom: elementHeight(elementHeight: 78).h),
                 child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                    },
                     child: Text(
                       "Resend Code",
                       style: TextStyle(
@@ -99,7 +102,9 @@ class VerificationScreen extends StatelessWidget {
                           fontFamily: "Inter"),
                     )),
               ),
-              RoundedButtton(buttonTitle: "Verify", buttonFunction: () {})
+              RoundedButtton(buttonTitle: "Verify", buttonFunction: () {
+                      Navigator.pushNamed(context, "/help");
+              })
             ],
           ),
         ),

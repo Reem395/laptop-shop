@@ -23,11 +23,11 @@ class _SplashScreenState extends State<SplashScreen> {
   
     Timer(
       const Duration(seconds: 5),
-      // ()=>Navigator.pushNamed(context, "/login")
+      ()=>Navigator.pushNamed(context, "/login")
       // ()=>Navigator.pushNamed(context, "/verify")
       // ()=>Navigator.pushNamed(context, "/help")
       // ()=>Navigator.pushNamed(context, "/home")
-      ()=>Navigator.pushNamed(context, "/details")
+      // ()=>Navigator.pushNamed(context, "/details")
     );
   }
 
