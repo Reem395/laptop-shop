@@ -36,16 +36,20 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^4.0.6
   bloc: ^8.0.3
-  flutter_bloc: ^8.0.1
+  flutter_bloc: ^8.1.2
   shared_preferences: ^2.0.15
   flutter_localizations:
     sdk: flutter
   flutter_translate: ^4.0.2
-  fluttertoast: ^8.0.9
+  fluttertoast: ^8.2.1
   sizer: ^2.0.15
   flutter_svg_provider: ^1.0.3
   container_tab_indicator: ^0.2.0
   curved_navigation_bar: ^1.0.2
+  intl: ^0.17.0
+  firebase_auth: ^4.2.10
+  firebase_core: ^2.7.1
+
 
 
 dev_dependencies:

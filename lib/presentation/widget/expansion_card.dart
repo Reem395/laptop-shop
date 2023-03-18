@@ -26,28 +26,28 @@ class ExpansionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomShadowContainer(
         child: ExpansionTile(
-          title: Text(
-            title,
-            style: TextStyle(
-                color: AppColor.primary,
-                fontSize: titleFontSize.sp,
-                fontFamily: "Inter"),
-          ),
-          children: [
-            Padding(
-              padding: EdgeInsets.only(
-                  left: elementWidth(elementWidth: 18).w,
-                  right: elementWidth(elementWidth: 19).w,
-                  bottom: elementHeight(elementHeight: 18).h),
-              child: SizedBox(
-                width: double.infinity,
-                child: Text(
-                  body,
-                  style: TextStyle(fontSize: bodyFontSize.sp),
-                ),
-              ),
+      title: Text(
+        title,
+        style: TextStyle(
+            color: AppColor.primary,
+            fontSize: titleFontSize.sp,
+            fontFamily: "Inter"),
+      ),
+      children: [
+        Padding(
+          padding: EdgeInsets.only(
+              left: elementWidth(elementWidth: 18).w,
+              right: elementWidth(elementWidth: 19).w,
+              bottom: elementHeight(elementHeight: 18).h),
+          child: SizedBox(
+            width: double.infinity,
+            child: Text(
+              body,
+              style: TextStyle(fontSize: bodyFontSize.sp),
             ),
-          ],
-        ));
+          ),
+        ),
+      ],
+    ));
   }
 }

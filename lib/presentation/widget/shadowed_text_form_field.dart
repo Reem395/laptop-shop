@@ -3,8 +3,8 @@ import 'package:sizer/sizer.dart';
 
 import '../styles/colors.dart';
 
-class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
+class ShadowedTextFormField extends StatelessWidget {
+  const ShadowedTextFormField({
     Key? key,
     required this.controller,
     this.hintText,
@@ -23,6 +23,8 @@ class CustomTextFormField extends StatelessWidget {
     this.textAlign = TextAlign.start,
     this.suffixIcon,
     this.prefixIcon,
+    this.validator,
+    this.onChanged,
   }) : super(key: key);
 
   final TextEditingController? controller;
@@ -41,9 +43,12 @@ class CustomTextFormField extends StatelessWidget {
   final double fontSize;
   final Color textColor;
   final Color shadowColor;
+  final String? Function(String?)? validator;
+  final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Container(
+      // height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
         color: AppColor.white,
@@ -56,6 +61,8 @@ class CustomTextFormField extends StatelessWidget {
         ],
       ),
       child: TextFormField(
+        validator: validator,
+        onChanged: onChanged,
         cursorHeight: cursorHeight,
         textAlign: textAlign,
         controller: controller,

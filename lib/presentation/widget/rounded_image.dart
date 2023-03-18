@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../styles/colors.dart';
 
 class RoundedImage extends StatelessWidget {
-  const RoundedImage({Key? key,
+  const RoundedImage({
+    Key? key,
     required this.image,
-    this.shadowColor=AppColor.lightGrey, 
-    this.blurRadius=10, 
-     this.backGroundRadius=25, 
-     this.spreadRadius=0.5, 
-   }) : super(key: key);
-
+    this.shadowColor = AppColor.lightGrey,
+    this.blurRadius = 10,
+    this.backGroundRadius = 25,
+    this.spreadRadius = 0.5,
+  }) : super(key: key);
 
   final Color shadowColor;
   final double blurRadius;
@@ -26,15 +26,16 @@ class RoundedImage extends StatelessWidget {
         boxShadow: [
           BoxShadow(
               blurRadius: blurRadius,
-               color: shadowColor,
-                spreadRadius: spreadRadius)
+              color: shadowColor,
+              spreadRadius: spreadRadius)
         ],
       ),
-      child:CircleAvatar(
+      child: CircleAvatar(
         radius: backGroundRadius,
         backgroundColor: AppColor.white,
-        child: Image.asset("assets/images/$image",
-            ),
+        child: Image.asset(
+          "assets/images/$image",
+        ),
       ),
     );
   }

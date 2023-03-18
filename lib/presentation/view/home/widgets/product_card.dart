@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:magdsoft_flutter_structure/constants/constants.dart';
 import 'package:magdsoft_flutter_structure/presentation/styles/colors.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../widget/custom_shadow_container.dart';
 import '../../../widget/linear_gradient_background.dart';
+import '../../../../data/models/products/products.dart';
 
 class ProductCard extends StatefulWidget {
   const ProductCard(
-      {Key? key, this.elevation = 8, this.borderRadius = 20, this.child})
+      {Key? key, this.elevation = 8, this.borderRadius = 20, this.child,
+       required this.product})
       : super(key: key);
 
   final double elevation;
   final double borderRadius;
   final Widget? child;
+  final Products product;
 
   @override
   State<ProductCard> createState() => _ProductCardState();
@@ -43,7 +47,14 @@ class _ProductCardState extends State<ProductCard> {
                           color: AppColor.black.withOpacity(0.25))
                     ]),
                 child: Stack(alignment: const Alignment(1.25, -1), children: [
-                  Image.asset("assets/images/razor.png"),
+                  // Image.asset("assets/images/razor.png"),
+                  widget.product.images![0]==null?const Center(child: Text("Image Provider Error"),):
+                  Center(
+                    child: Image.network("${widget.product.images![0]}",
+                    fit: BoxFit.contain,
+                    width: elementWidth(elementWidth: 145).w,
+                    height: elementHeight(elementHeight: 150).h,),
+                  ),
                   IconButton(
                     icon: Icon(
                       isFavourite
@@ -61,21 +72,24 @@ class _ProductCardState extends State<ProductCard> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: elementHeight(elementHeight: 8).h,
-              left: elementWidth(elementWidth: 9).w),
+              padding: EdgeInsets.only(
+                  top: elementHeight(elementHeight: 8).h,
+                  left: elementWidth(elementWidth: 9).w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Acer",
+                    "${widget.product.brand}",
                     style: TextStyle(color: AppColor.primary, fontSize: 18.sp),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: elementHeight(elementHeight: 5).h,
-                    bottom: elementHeight(elementHeight: 16).h),
+                    padding: EdgeInsets.only(
+                        top: elementHeight(elementHeight: 5).h,
+                        bottom: elementHeight(elementHeight: 16).h),
                     child: Text(
-                      "Razer Blade Stealth 13",
-                      style: TextStyle(color: AppColor.customGrey, fontSize: 10.sp),
+                      "${widget.product.model}",
+                      style: TextStyle(
+                          color: AppColor.customGrey, fontSize: 10.sp),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                     ),
@@ -84,7 +98,7 @@ class _ProductCardState extends State<ProductCard> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "30,000 EGP",
+                        NumberFormat.currency(decimalDigits:0,symbol:'EGP',locale: 'eu').format(widget.product.price),
                         style: TextStyle(
                             color: AppColor.customGrey, fontSize: 10.sp),
                       ),

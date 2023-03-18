@@ -9,8 +9,8 @@ class StaggeredGrid extends StatelessWidget {
     required this.crossAxisCount,
     required this.itemCount,
     this.crossAxisSpacing = 19,
-    this.mainAxisSpacing = 16, 
-    this.childAspectRatio=0.59,
+    this.mainAxisSpacing = 16,
+    this.childAspectRatio = 0.59,
   }) : super(key: key);
 
   final IndexedWidgetBuilder itemBuilder;
@@ -22,27 +22,27 @@ class StaggeredGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (context , boxConstraints ) { 
+      builder: (context, boxConstraints) {
         final width = boxConstraints.maxWidth;
-        final itemHeight = (width*0.5)/childAspectRatio;
-       return GridView.builder(
-        padding: EdgeInsets.only(bottom: itemHeight/2),
-        itemCount: itemCount,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount,
-        mainAxisSpacing: elementHeight(elementHeight: mainAxisSpacing).h,
-        crossAxisSpacing:elementWidth(elementWidth: crossAxisSpacing).w ,
-        childAspectRatio: childAspectRatio,
-        ),
-         itemBuilder: (BuildContext context, int index) {   
-          return Transform.translate(
-            offset: Offset(0, index.isEven ? 100 : 0),
-            child: itemBuilder(context, index),
-          );
-       
-         },
-      );
-       },
+        final itemHeight = (width * 0.5) / childAspectRatio;
+        return GridView.builder(
+          padding: EdgeInsets.only(bottom: itemHeight / 2),
+          itemCount: itemCount,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: crossAxisCount,
+            mainAxisSpacing: elementHeight(elementHeight: mainAxisSpacing).h,
+            crossAxisSpacing: elementWidth(elementWidth: crossAxisSpacing).w,
+            childAspectRatio: childAspectRatio,
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return Transform.translate(
+              offset: Offset(0, index.isEven ? 100 : 0),
+              // offset: Offset(0, index.isEven ? 50 : 0),
+              child: itemBuilder(context, index),
+            );
+          },
+        );
+      },
     );
   }
 }

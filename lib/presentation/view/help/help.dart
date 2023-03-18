@@ -17,9 +17,8 @@ class HelpScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: elementWidth(elementWidth: 16).w,
-              vertical: elementHeight(elementHeight: 20).h
-            ),
+                horizontal: elementWidth(elementWidth: 16).w,
+                vertical: elementHeight(elementHeight: 20).h),
             child: Column(
               children: [
                 Text(
@@ -63,15 +62,15 @@ class HelpScreen extends StatelessWidget {
                       title: "Service", body: "your data is safe and secure"),
                 ),
                 Padding(
-                  padding:EdgeInsets.only(
+                  padding: EdgeInsets.only(
                     top: elementHeight(elementHeight: 80).h,
                   ),
-                  child: RoundedButtton(buttonTitle: "Continue", buttonFunction: (){
-                      Navigator.pushNamed(context, "/home");
-
-                  }),
+                  child: RoundedButtton(
+                      buttonTitle: "Continue",
+                      buttonFunction: () {
+                        Navigator.pushNamed(context, "/home");
+                      }),
                 )
-              
               ],
             ),
           ),
