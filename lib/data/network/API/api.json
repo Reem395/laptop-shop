@@ -1,0 +1,99 @@
+{
+    "products": {
+        "data": [
+            {
+                "id": 1,
+                "brand": "Acer",
+                "model": "Acer Predator Helios 300",
+                "price": 30000,
+                "type": "Gaming Laptop",
+                "description": "Suit up, strap in – and let Helios pave the way. Equipped with superior cooling technology, a blisteringly fast display, and a trove of performance-enhancing features – this gaming laptop will be your guide to gaming bliss.",
+                "images": [
+                    "https://m.media-amazon.com/images/I/71nz3cIcFOL.jpg",
+                    "https://m.media-amazon.com/images/I/81WzAd1yxOL._AC_SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/812G4qld7eS._AC_SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/81fiOCDdLtL._AC_SX425_.jpg",
+                    "https://m.media-amazon.com/images/I/71LdXzvsewL._AC_SX425_.jpg"
+                ],
+                "specs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. "
+            },
+            {
+                "id": 2,
+                "brand": "Acer",
+                "model": "Acer Aspire 3",
+                "price": 30000,
+                "type": "Gaming Laptop",
+                "description": "The Aspire 3 is ready-to-go with the latest 12th Gen Intel® Core™ Processors1 with Iris® Xe Graphics—ideal for the entire family, with performance and productivity at the core. Perfect to get more out of work, study, or play.",
+                "images": [
+                    "https://m.media-amazon.com/images/I/61UDMk+-LcL._AC_SL1200_.jpg",
+                    "https://m.media-amazon.com/images/I/51cbE5QYulL._AC_SL1200_.jpg",
+                    "https://m.media-amazon.com/images/I/41QZAeQctEL._AC_SL1200_.jpg",
+                    "https://m.media-amazon.com/images/I/41aL66NfZKL._AC_SL1200_.jpg"
+                ],
+                "specs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. "
+            },
+            {
+                "id": 3,
+                "brand": "Razer",
+                "model": "Razer Blade Stealth 13",
+                "price": 40000,
+                "type": "Gaming Laptop",
+                "description": "Enter the next evolution of ultra-mobility and extreme performance. Utilizing the latest and greatest 11th gen Intel® Core™ i7 processor at 28W and a powerful GeForce® GTX 1650 Ti, you’ll rip through games and content creation tasks. Featuring the world’s fastest 13.3” 120Hz Full HD display for buttery smooth visuals or an all new OLED touch display - the Razer Blade Stealth 13 combines portability and style, with performance that’s perfect for gaming and productivity.",
+                "images": [
+                    "https://m.media-amazon.com/images/I/71VniIMpMkL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/717TLzrManL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/71cBC4y7VHL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/61wtJhszWmL._AC_SL1500_.jpg"
+                ],
+                "specs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. "
+            },
+            {
+                "id": 4,
+                "brand": "Razer",
+                "model": "Razer Blade Stealth 18",
+                "price": 60000,
+                "type": "Gaming Laptop",
+                "description": "The perfect combination between desktop performance and laptop design, the new Razer Blade 18 sets the bar for what an 18-inch laptop should be. Decked out with graphics up to an NVIDIA® GeForce™ RTX 4090 with full TGP and the latest Intel® 13th Gen Core™ i9 HX processors, the Razer Blade 18 is the most powerful laptop we’ve ever made. With a stunning QHD+ 18” display, crisp 5 MP webcam, and 6 speakers with THX Spatial Audio the new Razer Blade 18 brings a desktop experience wherever you decide to set up.",
+                "images": [
+                    "https://assets3.razerzone.com/lwEhOhca4D1mcHPWk9u2OcTtSJI=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh65%2Fh7a%2F9472706773022%2Fblade18-k9-1500x1000-5.jpg",
+                    "https://assets3.razerzone.com/O7nBEEO2AtUm7PQiOUXxnuQNnCk=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh95%2Fh73%2F9472706576414%2Fblade18-k9-1500x1000-4.jpg",
+                    "https://assets3.razerzone.com/LYZhuHtsn8gGMugNM5-XxgHV1sE=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh74%2Fh80%2F9472706904094%2Fblade18-k9-1500x1000-6.jpg",
+                    "https://assets3.razerzone.com/AntVEUD0FuFfpYqgp_T2TTx_Ow8=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fhfd%2Fh76%2F9472706674718%2Fblade18-k9-1500x1000-2.jpg"
+                ],
+                "specs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. "
+            },
+            {
+                "id": 5,
+                "brand": "Razer",
+                "model": "Razer Blade Stealth 17",
+                "price": 55000,
+                "type": "Gaming Laptop",
+                "description": "The new Razer Blade 17 is more powerful than ever, while still compact in design and improved thermals the Blade 17 empowers Pros with the latest NVIDIA and Intel processors. Able to withstand performance-demanding AAA games on the go, live-stream video while playing, or create masterpieces the Blade 17 is a powerhouse mobile desktop.",
+                "images": [
+                    "https://m.media-amazon.com/images/I/71gRjm97hvL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/71UN517XwOL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/71YXN86T7OL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/51fUUVcJYDL._AC_SL1500_.jpg",
+                    "https://m.media-amazon.com/images/I/71pVpjjsglL._AC_SL1500_.jpg"
+                ],
+                "specs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. "
+            },
+            {
+                "id": 6,
+                "brand": "Razer",
+                "model": "Razer Blade 16",
+                "price": 62000,
+                "type": "Gaming Laptop",
+                "description": "Experience insane performance and ultra-portability with the Razer Blade 16—featuring more graphics power per inch³ than any other 16” gaming laptop1,2. Armed with the world’s first dual-mode mini-LED display, witness quality you can’t unsee with UHD+ 120 Hz and FHD+ 240 Hz native resolutions.",
+                "images": [
+                    "https://assets3.razerzone.com/vbQTovlZZfknCczgeS4AqzIkBJI=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh63%2Fh7d%2F9472706838558%2Fblade16-s9-1500x1000-1.jpg",
+                    "https://assets3.razerzone.com/a3g0kas0Ph8K3s0LdB0sx5zQPUw=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fhcd%2Fh7d%2F9472706871326%2Fblade16-s9-1500x1000-4.jpg",
+                    "https://assets3.razerzone.com/mo2Rpexv-eWF3tIbhWQOTXLeEkw=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh0e%2Fh7a%2F9472706740254%2Fblade16-s9-1500x1000-5.jpg",
+                    "https://assets3.razerzone.com/O_aT2qCNpRxE68u2KWcL4qtTCw0=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fhcb%2Fh80%2F9472706936862%2Fblade16-s9-1500x1000-6.jpg",
+                    "https://assets3.razerzone.com/YPpjPjMizVkeo8-DXSvI8S4bAC0=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh3c%2Fh76%2F9472706609182%2Fblade16-s9-1500x1000-3.jpg"
+                ],
+                "specs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. "
+            }
+        ]
+    }
+}

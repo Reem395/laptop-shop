@@ -16,39 +16,43 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
-  void initState(){
+  void initState() {
     super.initState();
-  
-    Timer(
-      const Duration(seconds: 5),
-      // ()=>Navigator.pushNamed(context, "/login")
-      // ()=>Navigator.pushNamed(context, "/verify")
-      // ()=>Navigator.pushNamed(context, "/help")
-      // ()=>Navigator.pushNamed(context, "/home")
-      ()=>Navigator.pushNamed(context, "/details")
-    );
+
+    Timer(const Duration(seconds: 5),
+        // ()=>Navigator.pushNamed(context, "/login")
+        // ()=>Navigator.pushNamed(context, "/verify")
+        // ()=>Navigator.pushNamed(context, "/help")
+        // ()=>Navigator.pushNamed(context, "/details")
+        () {
+      // BlocProvider.of<ProductsCubit>(context).getProduct();
+      //  Navigator.pushNamed(context, "/home");
+        Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
+        // Navigator.pushNamed(context, "/verify");
+
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children:
-        [
-          Container(
-            color:  AppColor.primary,
-            child: Image.asset("assets/images/splash_background.png",
-            fit: BoxFit.fill,)
-            ,height: 100.h,),
-          Center(child: Image.asset("assets/images/splash_logo.png",
-            height: 208/height*100.h,
-            width: 269/width*100.w,
-          )
+      body: Stack(children: [
+        Container(
+          color: AppColor.primary,
+          child: Image.asset(
+            "assets/images/splash_background.png",
+            fit: BoxFit.fill,
           ),
-        ] 
-      ),
+          height: 100.h,
+        ),
+        Center(
+            child: Image.asset(
+          "assets/images/splash_logo.png",
+          height: 208 / height * 100.h,
+          width: 269 / width * 100.w,
+        )),
+      ]),
     );
   }
 }

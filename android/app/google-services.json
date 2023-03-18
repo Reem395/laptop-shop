@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "11879661373",
+    "project_id": "laptopstore-d6390",
+    "storage_bucket": "laptopstore-d6390.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11879661373:android:e1fe3bbddaa1964b0dcf54",
+        "android_client_info": {
+          "package_name": "com.example.magdsoft_flutter_structure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11879661373-pumn1fmbrpggas174efv5b5pibd9gj87.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.magdsoft_flutter_structure",
+            "certificate_hash": "bc7a1eec389fbf8d299e496fcea83ec6de47b0f6"
+          }
+        },
+        {
+          "client_id": "11879661373-qime1rbe54721sgf3ttvr9rmi1easfg6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEOA6oB_ElXVNvYNXJnWxe70M82ugfQ2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11879661373-qime1rbe54721sgf3ttvr9rmi1easfg6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
