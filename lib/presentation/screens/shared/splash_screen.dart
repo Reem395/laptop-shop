@@ -20,17 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 5),
-        // ()=>Navigator.pushNamed(context, "/login")
-        // ()=>Navigator.pushNamed(context, "/verify")
-        // ()=>Navigator.pushNamed(context, "/help")
-        // ()=>Navigator.pushNamed(context, "/details")
-        () {
+    Timer(const Duration(seconds: 5), () {
       // BlocProvider.of<ProductsCubit>(context).getProduct();
-      //  Navigator.pushNamed(context, "/home");
-        Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
-        // Navigator.pushNamed(context, "/verify");
-
+      Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
     });
   }
 

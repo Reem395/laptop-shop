@@ -28,17 +28,17 @@ class ProductsCubit extends Cubit<ProductState> {
       emit(ProductFailed());
     }
   }
-  List<Products> changeCategoryPage(int index){
-       if(index==0){
-        return allProducts;
-      }
-      else if (index==1){
-        return allProducts.where((element) =>element.brand=="Acer").toList();
-      }
-      else{
-        return allProducts.where((element) =>element.brand=="Razer") .toList();
-      }
+
+  List<Products> changeCategoryPage(int index) {
+    if (index == 0) {
+      return allProducts;
+    } else if (index == 1) {
+      return allProducts.where((element) => element.brand == "Acer").toList();
+    } else {
+      return allProducts.where((element) => element.brand == "Razer").toList();
+    }
   }
+
   changeMainImage({required String image}) {
     mainImage = image;
     emit(ProductMainImageChanged());
@@ -47,9 +47,11 @@ class ProductsCubit extends Cubit<ProductState> {
   String setMainImage(Products product) {
     return mainImage = product.images![0];
   }
-  List<Products>? searchProduct(String keyword){
-    
-     return allProducts.where((element) => element.model!.toLowerCase().contains(keyword.toLowerCase())).toList();
-   
+
+  List<Products>? searchProduct(String keyword) {
+    return allProducts
+        .where((element) =>
+            element.model!.toLowerCase().contains(keyword.toLowerCase()))
+        .toList();
   }
 }

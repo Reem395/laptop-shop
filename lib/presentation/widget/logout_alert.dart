@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:magdsoft_flutter_structure/business_logic/login_cubit/login_cubit.dart';
 import 'package:magdsoft_flutter_structure/business_logic/login_cubit/login_state.dart';
@@ -23,7 +20,7 @@ class LogoutAlert extends StatelessWidget {
       },
       builder: (context, state) {
         return InkWell(
-            child: Center(child: Text("data")),
+            child: const Center(child: Text("data")),
             onTap: () {
               print("from ink");
               showDialog(

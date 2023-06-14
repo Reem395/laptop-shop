@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:magdsoft_flutter_structure/data/models/products/products.dart';
 import 'package:magdsoft_flutter_structure/presentation/view/help/help.dart';
-import 'package:magdsoft_flutter_structure/presentation/view/home/home.dart';
 import 'package:magdsoft_flutter_structure/presentation/view/product_details/product_details.dart';
 
 import '../screens/login_screen.dart';
 import '../screens/verification_screen.dart';
 import '../screens/shared/splash_screen.dart';
-import '../../data/models/products/products.dart';
 import '../screens/shared/store_layout/store_layout.dart';
 import '../view/search_result.dart';
 

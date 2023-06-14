@@ -1,8 +1,5 @@
 import 'package:container_tab_indicator/container_tab_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:magdsoft_flutter_structure/business_logic/products_cubit/products_cubit.dart';

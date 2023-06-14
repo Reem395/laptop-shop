@@ -7,22 +7,25 @@ import 'package:sizer/sizer.dart';
 
 import '../../../../constants/constants.dart';
 import '../../../../data/models/products/products.dart';
-import '../../../styles/colors.dart';
 import '../../../widget/custom_shadow_container.dart';
 
-class SearchBar extends StatelessWidget {
-  SearchBar({Key? key, required this.searchController,this.topPadding=50,
-  this.boxWidth=390}) : super(key: key);
+class SearchBarCustom extends StatelessWidget {
+  const SearchBarCustom(
+      {Key? key,
+      required this.searchController,
+      this.topPadding = 50,
+      this.boxWidth = 390})
+      : super(key: key);
   final TextEditingController searchController;
   final double topPadding;
-  String _searchedProduct = "";
-  List<Products>? productFiltered = [];
   final double boxWidth;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProductsCubit, ProductState>(
       builder: (context, state) {
         ProductsCubit cubit = BlocProvider.of<ProductsCubit>(context);
+        String _searchedProduct = "";
+        List<Products>? productFiltered = [];
         return Padding(
           padding: EdgeInsets.only(
             top: elementHeight(elementHeight: topPadding).h,
@@ -53,15 +56,19 @@ class SearchBar extends StatelessWidget {
                             _searchedProduct = text;
                             print("You typed: $_searchedProduct");
                           },
-                          contentPadding: const EdgeInsets.all(10),
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 11, vertical: 8.74),
                           suffixIcon: IconButton(
                               onPressed: () {
                                 print("search");
                                 productFiltered?.clear();
                                 print("search send: $_searchedProduct");
-                                productFiltered = [...?cubit.searchProduct(_searchedProduct)];
+                                productFiltered = [
+                                  ...?cubit.searchProduct(_searchedProduct)
+                                ];
                                 print("filter: ${productFiltered?.length}");
-                                Navigator.pushNamed(context, "/search",arguments:productFiltered );
+                                Navigator.pushNamed(context, "/search",
+                                    arguments: productFiltered);
                               },
                               icon: const Icon(Icons.search)),
                         ))),
