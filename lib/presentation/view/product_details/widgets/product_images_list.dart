@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:magdsoft_flutter_structure/business_logic/products_cubit/products_cubit.dart';
 import 'package:magdsoft_flutter_structure/business_logic/products_cubit/products_state.dart';
-import 'package:magdsoft_flutter_structure/data/models/products/products.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../constants/constants.dart';

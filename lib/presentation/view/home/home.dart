@@ -1,5 +1,4 @@
 import 'package:container_tab_indicator/container_tab_indicator.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:magdsoft_flutter_structure/business_logic/products_cubit/products_cubit.dart';
@@ -13,10 +12,8 @@ import 'package:sizer/sizer.dart';
 
 import '../../../constants/constants.dart';
 import '../../widget/customized_title.dart';
-import 'widgets/product_card.dart';
 import 'widgets/search_bar.dart';
 import 'widgets/selected_page.dart';
-import 'widgets/staggered_grid.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -26,16 +23,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _page = 1;
-  final TextEditingController _searchController=TextEditingController();
+  // final int _page = 1;
+  final TextEditingController _searchController = TextEditingController();
 
   List<Products> productList = [];
-  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  // final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   @override
   void initState() {
     super.initState();
-      BlocProvider.of<ProductsCubit>(context).getProduct();
-
+    BlocProvider.of<ProductsCubit>(context).getProduct();
   }
 
   int? _tabCurrentIndex = 0;
@@ -48,11 +44,14 @@ class _HomeScreenState extends State<HomeScreen> {
           listener: (context, state) {
             if (state is ProductSucces) {
               productList.clear();
-              productList = [...BlocProvider.of<ProductsCubit>(context).allProducts];
+              productList = [
+                ...BlocProvider.of<ProductsCubit>(context).allProducts
+              ];
             }
           },
           builder: (context, state) {
-            ProductsCubit productCubit =BlocProvider.of<ProductsCubit>(context);
+            ProductsCubit productCubit =
+                BlocProvider.of<ProductsCubit>(context);
             final TabController tabController =
                 DefaultTabController.of(context);
             tabController.addListener(() {
@@ -61,8 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   _tabCurrentIndex = tabController.index;
                 });
                 productList.clear();
-                productList.addAll(productCubit.changeCategoryPage(_tabCurrentIndex!));
-
+                productList
+                    .addAll(productCubit.changeCategoryPage(_tabCurrentIndex!));
               }
             });
             return LinearGradientBackground(
@@ -76,7 +75,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       /**Search  */
-                      SearchBar(searchController: _searchController,),
+                      SearchBarCustom(
+                        searchController: _searchController,
+                      ),
                       /**Header */
                       const HomeHeader(),
                       /**Tabs*/
@@ -136,15 +137,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             )
                           : state is ProductFailed
-                              ?const  Expanded(
-                                child: Center(
+                              ? const Expanded(
+                                  child: Center(
                                     child: Text(
                                       "Something went wrong please try again later",
                                       style:
                                           TextStyle(color: AppColor.customGrey),
                                     ),
                                   ),
-                              )
+                                )
                               : Expanded(
                                   child: TabBarView(children: [
                                     SelectedPage(
@@ -165,7 +166,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-         
             );
           },
         ),

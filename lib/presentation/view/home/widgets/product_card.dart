@@ -5,7 +5,6 @@ import 'package:magdsoft_flutter_structure/presentation/styles/colors.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../widget/custom_shadow_container.dart';
-import '../../../widget/linear_gradient_background.dart';
 import '../../../../data/models/products/products.dart';
 
 class ProductCard extends StatefulWidget {

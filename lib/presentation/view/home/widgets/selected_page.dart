@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:magdsoft_flutter_structure/presentation/view/home/widgets/product_card.dart';
 import 'package:magdsoft_flutter_structure/presentation/view/home/widgets/staggered_grid.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../constants/constants.dart';
 import '../../../../data/models/products/products.dart';
-import '../../../styles/colors.dart';
 
 class SelectedPage extends StatelessWidget {
-   SelectedPage({Key? key, required this.productList,
+   const SelectedPage({Key? key, required this.productList,
   this.title}) : super(key: key);
   final List<Products> productList;
   final Widget? title;
@@ -46,7 +41,7 @@ class SelectedPage extends StatelessWidget {
           ),
         ),
       ),
-      title??SizedBox(),
+      title??const SizedBox(),
     
     ]);
   }

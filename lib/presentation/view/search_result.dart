@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../constants/constants.dart';
@@ -17,70 +15,71 @@ class SearchResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async{ 
+      onWillPop: () async {
         // return false;
-         Navigator.pushNamedAndRemoveUntil(context, "/home", (route) => false);
-         return false;
-         },
+        Navigator.pushNamedAndRemoveUntil(context, "/home", (route) => false);
+        return false;
+      },
       child: Scaffold(
         extendBodyBehindAppBar: true,
-              appBar: AppBar(
+        appBar: AppBar(
           leadingWidth: elementWidth(elementWidth: 56).w,
           toolbarHeight: elementHeight(elementHeight: 56).h,
           leading: Padding(
               padding: EdgeInsets.only(
                   left: elementWidth(elementWidth: 10).w,
-                  bottom: elementHeight(elementHeight: 8).h
-                  ),
+                  bottom: elementHeight(elementHeight: 8).h),
               child: ArrowShadowContainer(
                 iconSize: 23,
                 icon: Icons.arrow_back_ios,
                 onPressed: () {
                   // productCubit.mainImage = "";
-                  Navigator.pushNamedAndRemoveUntil(context, "/home", (route) => false);
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, "/home", (route) => false);
                 },
               )),
-              title:   SearchBar(
-                boxWidth: 324,
-                      topPadding: 10,
-                      searchController: _searchController,
-                    ),
+          title: SearchBarCustom(
+            boxWidth: 324,
+            topPadding: 10,
+            searchController: _searchController,
+          ),
           backgroundColor: Colors.transparent,
         ),
         body: LinearGradientBackground(
-          child: 
-           SafeArea(
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: elementWidth(elementWidth: 20).w,
-                  // bottom: 50
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    /**Search  */
-                    // SearchBar(
-                    //   topPadding: 10,
-                    //   searchController: _searchController,
-                    // ),
-                    /**Result */
-                    products==null||products!.isEmpty
-                        ? Expanded(
+          child: SafeArea(
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: elementWidth(elementWidth: 20).w,
+                // bottom: 50
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /**Search  */
+                  // SearchBar(
+                  //   topPadding: 10,
+                  //   searchController: _searchController,
+                  // ),
+                  /**Result */
+                  products == null || products!.isEmpty
+                      ? Expanded(
                           child: Center(
-                              child: Text("No Products Found!",style: TextStyle(fontSize: 16.sp),),
+                            child: Text(
+                              "No Products Found!",
+                              style: TextStyle(fontSize: 16.sp),
                             ),
+                          ),
                         )
-                        : Expanded(
+                      : Expanded(
                           child: SelectedPage(
-                              productList: products!,
-                              title: null,
-                            ),
+                            productList: products!,
+                            title: null,
+                          ),
                         ),
-                  ],
-                ),
+                ],
               ),
             ),
-         
+          ),
         ),
       ),
     );

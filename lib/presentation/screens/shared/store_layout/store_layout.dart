@@ -1,8 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:magdsoft_flutter_structure/presentation/view/home/home.dart';
 import 'package:sizer/sizer.dart';
@@ -11,7 +8,6 @@ import '../../../../business_logic/login_cubit/login_cubit.dart';
 import '../../../../business_logic/login_cubit/login_state.dart';
 import '../../../../constants/constants.dart';
 import '../../../styles/colors.dart';
-import '../../../widget/logout_alert.dart';
 import '../../../view/notification/notification_screen.dart';
 
 class StoreLayout extends StatefulWidget {
@@ -25,9 +21,9 @@ class _StoreLayoutState extends State<StoreLayout> {
   List<Widget> navPages = [
     // InkWell(onTap: (){},),
     // LogoutAlert(),
-    HomeScreen(),
-    HomeScreen(),
-    NotificationScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
+    const NotificationScreen(),
   ];
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   int _page = 1;
@@ -36,8 +32,9 @@ class _StoreLayoutState extends State<StoreLayout> {
   Widget build(BuildContext context) {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
-         if (state is LogOut) {
-          Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+        if (state is LogOut) {
+          Navigator.pushNamedAndRemoveUntil(
+              context, '/login', (route) => false);
         }
       },
       builder: (context, state) {
@@ -85,7 +82,7 @@ class _StoreLayoutState extends State<StoreLayout> {
                         );
                       });
                 },
-                icon: Icon(Icons.logout_outlined),
+                icon: const Icon(Icons.logout_outlined),
                 color: _page == 0 ? AppColor.white : AppColor.lightGrey,
               ),
               // Icon(

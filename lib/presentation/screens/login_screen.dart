@@ -177,6 +177,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: SizedBox(
                             height: elementHeight(elementHeight: 48.01).h,
                             child: ShadowedTextFormField(
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 11, vertical: 13.74),
                               controller: _fullNameController,
                               hintText: "Enter your Full Name",
                               validator: (value) {
@@ -200,6 +202,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: ShadowedTextFormField(
                               controller: _phoneController,
                               hintText: "Enter your Phone Number",
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 11, vertical: 13.74),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   // return 'Please enter your phone number';
@@ -238,17 +242,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           child: RoundedButtton(
                               buttonTitle: "Login",
-                              buttonFunction: cubit.loginButtonEnabled?() {
-                                if (_formKey.currentState!.validate()) {}
-                                if (_fullNameController.text.isNotEmpty &&
-                                    _phoneController.text.isNotEmpty) {
-                                  cubit.verifyPhoneNumber(
-                                      phoneNumer: "+2${_phoneController.text}");
-                                  cubit.loginButtonEnabled = false;
-                                }
-                                print("pressed");
-                              }:null
-                              ),
+                              buttonFunction: cubit.loginButtonEnabled
+                                  ? () {
+                                      if (_formKey.currentState!.validate()) {}
+                                      if (_fullNameController.text.isNotEmpty &&
+                                          _phoneController.text.isNotEmpty) {
+                                        cubit.verifyPhoneNumber(
+                                            phoneNumer:
+                                                "+2${_phoneController.text}");
+                                        cubit.loginButtonEnabled = false;
+                                      }
+                                      print("pressed");
+                                    }
+                                  : null),
                         )
                       ],
                     ),

@@ -3,12 +3,12 @@ import 'package:magdsoft_flutter_structure/constants/constants.dart';
 import 'package:sizer/sizer.dart';
 
 class NotificationScreen extends StatelessWidget {
-  NotificationScreen({Key? key}) : super(key: key);
-  String notificationTitle =
+  const NotificationScreen({Key? key}) : super(key: key);
+  final String notificationTitle =
       "John Hammond commented on Isla Nublar SOC2 complaint report";
-  String notificationBody =
+  final String notificationBody =
       "leaves are an integral part of the stem system. They are attached by a continuos vascular system to the rest of the plant so that free exchange of nutrients.";
-  String notificationDate = "Yesterday at 11:42 PM";
+  final String notificationDate = "Yesterday at 11:42 PM";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +37,8 @@ class NotificationScreen extends StatelessWidget {
                   ),
                 ),
                 title: Padding(
-                  padding: EdgeInsets.only(
-                    top:elementHeight(elementHeight: 8).h
-                  ),
+                  padding:
+                      EdgeInsets.only(top: elementHeight(elementHeight: 8).h),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
