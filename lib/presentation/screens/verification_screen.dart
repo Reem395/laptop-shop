@@ -28,7 +28,7 @@ class VerificationScreen extends StatelessWidget {
         child: SafeArea(
           child: BlocConsumer<LoginCubit, LoginState>(
             listener: (context, state) {
-              if (state is LoginVerificationSucess) {
+              if (state is PhoneLoginVerificationSucess) {
                 print("from if success login");
                 print(
                     "code : $_firstNumber$_secondNumber$_thirdNumber$_fourthNumber$_fifthNumber$_sixthNumber");
