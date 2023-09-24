@@ -16,7 +16,7 @@ class ProductsCubit extends Cubit<ProductState> {
     emit(ProductLoading());
     try {
       var response = await DioHelper.getData(
-          url: 'http://192.168.100.10:3000/products', query: {});
+          url: 'http://192.168.100.4:3000/products', query: {});
       //  print(response.data['data'][2]);
       ProductsResponse productResponse =
           ProductsResponse.fromJson(response.data);
