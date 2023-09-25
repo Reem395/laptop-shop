@@ -17,7 +17,7 @@ Laptop Store is built using a combination of powerful technologies to ensure a s
 * Dio: For making network requests and handling API interactions to fetch laptop data.
 * Bloc: For state management and ensuring a clean separation of UI and business logic.
 * SharedPreferences: To store and retrieve user preferences.
-* Json Server**: Used as a local development API for testing and simulating the backend without a real server.
+* Json Server: Used as a local development API for testing and simulating the backend without a real server.
 * Sizer: For responsive design, ensuring the app looks great on various screen sizes and orientations.
 * Firebase Authentication (fire_auth): For secure and convenient authentication options, including phone authentication.
 * Google Sign-In (google_sign_in): To enable users to log in quickly and easily with their Google accounts.
