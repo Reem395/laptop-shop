@@ -11,7 +11,7 @@ Tired of scrolling through countless laptops? Use our search feature to quickly 
 4. Authentication
 Enjoy a personalized experience by logging in with either your phone number (Phone Auth) or your Google account (Google Auth).
 
-Technologies Used
+## Technologies Used
 Laptop Store is built using a combination of powerful technologies to ensure a seamless and efficient user experience:
 
 Dio: For making network requests and handling API interactions to fetch laptop data.
