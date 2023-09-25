@@ -1,4 +1,4 @@
-# magdsoft_flutter_structure
+# Laptop Shop
 
 magdsoft mobile application structure for flutter
 
