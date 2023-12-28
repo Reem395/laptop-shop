@@ -12,7 +12,7 @@ import 'package:sizer/sizer.dart';
 import 'business_logic/login_cubit/login_cubit.dart';
 
 // late LocalizationDelegate delegate;
-/// To run LocalHost type: json-server --host 192.168.100.10 api.json
+/// To run LocalHost type: json-server --host 192.168.1.10 api.json
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,26 +24,13 @@ Future<void> main() async {
   ));
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key, required this.appRouter}) : super(key: key);
   final AppRouter appRouter;
-
-  const MyApp({
-    required this.appRouter,
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
-          // BlocProvider(
-          //   create: ((context) => GlobalCubit()),
-          // ),
           BlocProvider(
             create: ((context) => ProductsCubit()),
           ),
@@ -55,7 +42,7 @@ class _MyAppState extends State<MyApp> {
           builder: (context, orientation, deviceType) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              onGenerateRoute: widget.appRouter.onGenerateRoute,
+              onGenerateRoute: appRouter.onGenerateRoute,
               theme: ThemeData(
                 fontFamily: 'Inter',
                 appBarTheme: const AppBarTheme(

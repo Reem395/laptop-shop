@@ -48,6 +48,22 @@ class _LoginScreenState extends State<LoginScreen> {
             print("from if success");
             Navigator.pushNamed(context, "/verify");
           }
+          if (state is PhoneInvalid) {
+            print("from if Inavlid Phone");
+            Fluttertoast.showToast(
+                msg: "Phone Invalid",
+                toastLength: Toast.LENGTH_SHORT,
+                backgroundColor: AppColor.customGrey);
+          }
+          if (state is GoogleLoginSuccess) {
+            Navigator.pushNamed(context, "/home");
+          }
+          if (state is GoogleLoginFailed) {
+            Fluttertoast.showToast(
+                msg: "LogIn Failed",
+                toastLength: Toast.LENGTH_SHORT,
+                backgroundColor: AppColor.customGrey);
+          }
         },
         builder: (context, state) {
           LoginCubit cubit = BlocProvider.of<LoginCubit>(context);
@@ -116,7 +132,17 @@ class _LoginScreenState extends State<LoginScreen> {
                               onTap: () {},
                               child: const RoundedImage(image: "ios 1.png")),
                           InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                try {
+                                  cubit.signInWithGoogle();
+                                  
+                                } catch (e) {
+                                  Fluttertoast.showToast(
+                                      msg: "Ina",
+                                      toastLength: Toast.LENGTH_SHORT,
+                                      backgroundColor: AppColor.customGrey);
+                                }
+                              },
                               child:
                                   const RoundedImage(image: "GoogleIcon.png")),
                         ],
