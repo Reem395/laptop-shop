@@ -41,11 +41,16 @@ dependencies:
   fluttertoast: ^8.2.1
   sizer: ^2.0.15
   curved_navigation_bar: ^1.0.2
-  firebase_auth: ^4.2.10
   firebase_core: ^2.7.1
   container_tab_indicator: ^0.3.0
   intl: ^0.18.1
+<<<<<<< HEAD
   google_sign_in: ^6.1.5
+=======
+  google_sign_in: ^6.1.4
+  firebase_auth: ^4.7.2
+  protobuf: ^3.1.0
+>>>>>>> 2f93acf63d83909c339102c7743a7f497c254a9c
 
 
 

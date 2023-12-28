@@ -14,15 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "11879661373-fh3d81ulkaqjacb0mdac2u36d1a5l97k.apps.googleusercontent.com",
+          "client_id": "11879661373-nul5pjjeet0um0hhsfb5uffvuhc4ev6e.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.magdsoft_flutter_structure",
-            "certificate_hash": "d5a1a2a51ed8ee73450e700d69db1ac3273a44c7"
+            "certificate_hash": "25c5c5ad50aee26b520707a423a552dc9cc9b491"
           }
         },
         {
-          "client_id": "11879661373-qime1rbe54721sgf3ttvr9rmi1easfg6.apps.googleusercontent.com",
+          "client_id": "11879661373-dr1b2k29la1do6dp0nv8tuup3ujii24e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -35,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "11879661373-qime1rbe54721sgf3ttvr9rmi1easfg6.apps.googleusercontent.com",
+              "client_id": "11879661373-dr1b2k29la1do6dp0nv8tuup3ujii24e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

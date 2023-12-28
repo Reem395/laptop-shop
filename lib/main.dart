@@ -27,6 +27,10 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key, required this.appRouter}) : super(key: key);
   final AppRouter appRouter;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2f93acf63d83909c339102c7743a7f497c254a9c
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
